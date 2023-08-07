@@ -13,7 +13,8 @@ class _MoveWindow extends StatelessWidget {
         onPanStart: (details) {
           appWindow.startDragging();
         },
-        onDoubleTap: this.onDoubleTap ?? () => appWindow.maximizeOrRestore(),
+        //disable double click, because it will be let application response delay 300ms, if enable double click
+        // onDoubleTap: this.onDoubleTap ?? () => appWindow.maximizeOrRestore(),
         child: this.child ?? Container());
   }
 }
